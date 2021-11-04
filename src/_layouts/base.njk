@@ -1,0 +1,157 @@
+{%- include "site-head.njk" -%}
+
+<body>
+  <main id="main-content" class="[ flow flow-space-900 ]">
+    <div class="[ wrapper ]">
+      <h1>French Verbs</h1>
+
+        <fieldset id="conjugation-form"  class="[ flow flow-space-300 ][ card ]">
+          <div id="theVerbInput" class="[ flow ]">
+            <label for="inputVerb">Type a verb to conjugate</label>
+            <input id="inputVerb" type="text" tabindex="0" autofocus="autofocus" value="">
+          </div>
+          <div id="submit">
+            <input id="conjugate-button" class="button" type="submit" tabindex="0" value="Conjugate">
+          </div>
+          <p id="error-message"></p>
+        </fieldset>
+    </div>
+
+    <div class="[ wrapper ]" id="indicative">
+      <div class="[ card ][ flow ]">
+        <h3 class="header-line">The Big 10</h3>
+        <div class="[ grid-2col ][ flow-space-400 ]">
+          <div class="table-conjugation">
+            <h5>Présent</h5>
+            <p id="indicative-présent"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Passé composé</h5>
+            <p id="indicatif-passé-composé"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Imparfait</h5>
+            <p id="indicatif-imparfait"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Plus que parfait</h5>
+            <p id="indicatif-plus-que-parfait"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Futur simple</h5>
+            <p id="indicatif-futur-simple"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Futur antérieur</h5>
+            <p id="indicatif-futur-antérieur"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Conditionnel Présent</h5>
+            <p id="conditionnel-présent"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Conditionnel Passé</h5>
+            <p id="conditionnel-passé-1"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Subjonctif Présent</h5>
+            <p id="subjonctif-présent"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Subjonctif Passé</h5>
+            <p id="subjonctif-passé"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="[ wrapper ]" id="indicative">
+      <div class="[ card ][ flow ]">
+        <h3 class="header-line">Indicative</h3>
+        <div class="[ grid-2col ][ flow-space-400 ]">
+          <div class="table-conjugation">
+            <h5>Présent</h5>
+            <p id="indicative-présent"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Passé composé</h5>
+            <p id="indicatif-passé-composé"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Imparfait</h5>
+            <p id="indicatif-imparfait"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Plus que parfait</h5>
+            <p id="indicatif-plus-que-parfait"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Passé simple</h5>
+            <p id="indicatif-passé-simple"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Passé antérieur</h5>
+            <p id="indicatif-passé-antérieur"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Futur simple</h5>
+            <p id="indicatif-futur-simple"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Futur antérieur</h5>
+            <p id="indicatif-futur-antérieur"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="[ wrapper ]" id="subjonctif">
+      <div class="[ card ][ flow ]">
+        <h3 class="header-line">Subjonctif</h3>
+        <div class="[ grid-2col ][ flow-space-400 ]">
+          <div class="table-conjugation">
+            <h5>Présent</h5>
+            <p id="subjonctif-présent"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Passé</h5>
+            <p id="subjonctif-passé"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Imparfait</h5>
+            <p id="subjonctif-imparfait"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Plus que parfait</h5>
+            <p id="subjonctif-plus-que-parfait"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="[ wrapper ]" id="conditionnel">
+      <div class="[ card ][ flow ]">
+        <h3 class="header-line">Conditionnel</h3>
+        <div class="[ grid-2col ][ flow-space-400 ]">
+          <div class="table-conjugation">
+            <h5>Présent</h5>
+            <p id="conditionnel-présent"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Passé 1<sup>re</sup> forme</h5>
+            <p id="conditionnel-passé-1"></p>
+          </div>
+          <div class="table-conjugation">
+            <h5>Passé 2<sup>e</sup> forme</h5>
+            <p id="conditionnel-passé-2"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script type="text/javascript" src="/assets/js/conjugate.js"></script>
+</body>
+
+</html>

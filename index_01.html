@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title>Conjugaison</title>
+  <script type="text/javascript" src='verbes.js'></script>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <style type="text/css">
+    body {
+      font-family: Georgia;
+      background: #fff;
+      color: #444;
+    }
+
+    #pge {
+      width: 500px;
+      margin: 30px auto;
+      padding: 13px;
+      background: #edeede;
+      text-align: center
+    }
+
+    select {
+      display: block;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="pge">
+    <fieldset>
+      <legend>Conjugaison</legend>
+      <p>1980 verbes à conjuger !</p>
+      <select id="slc" onchange="conjugue(this.value)">
+        <option>Choix du verbe à conjuger</option>
+      </select>
+      <div id="cdr"></div>
+    </fieldset>
+  </div>
+
+  <script type="text/javascript">
+    var vrb;
+    (function () {
+      var i, v, arrVrb = verbes.split(','),
+        m = arrVrb.length,
+        slc;
+      vrb = {};
+      for (i = 0; i < m; i++) {
+        v = arrVrb[i];
+        switch (v.substr(-2)) {
+          case 'er':
+            vrb[v] = 1;
+            break;
+          case 'ir':
+            vrb[v] = 2;
+            break;
+          case 're':
+            vrb[v] = 3;
+            break;
+          default:
+            vrb[v] = 4;
+            break;
+        }
+        slc = document.getElementById('slc');
+      }
+      for (i in vrb) slc.options[slc.options.length] = new Option(i, i);
+    }());
+    alert('ok !');
+
+    function conjugue(ceVerbe) {
+      alert(ceVerbe + ' groupe n°' + vrb[ceVerbe])
+    }
+  </script>
+
+</body>
+</html>
